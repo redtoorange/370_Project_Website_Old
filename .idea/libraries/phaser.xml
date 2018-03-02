@@ -1,5 +1,10 @@
 <component name="libraryTable">
   <library name="phaser" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/assets/js/phaser.js" />
+      </sourceFilesUrls>
+    </properties>
     <CLASSES />
     <JAVADOC />
     <SOURCES>

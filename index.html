@@ -1,3 +1,7 @@
+<!--
+	Iteration 0 Prototype Homepage
+	Andrew McGuiness and Ryan Kelley
+-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -8,17 +12,17 @@
     <link rel="stylesheet" href="assets/css/main.css"/>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
 
-
 </head>
 <body class="is-loading">
 
-<!-- Wrapper -->
+
 <div id="wrapper">
     
-    <!-- Main -->
+
     <section id="main">
+	
+		<!-- Placeholder until we find a nice icon -->
         <header>
-            
             <span class="avatar">
                 <img src="images/avatar.jpg" alt=""/>
             </span>
@@ -26,6 +30,7 @@
         </header>
         
         
+		<!-- Form to accept the user's information -->
         <form method="post" action="submitData.php">
             
             <div class="field">
@@ -63,7 +68,7 @@
                 </div>
             </div>
             
-            
+            <!-- Submit the information to the DB script -->
             <ul class="actions">
                 <li>
                     <input id="submitButton" class="button" type="submit" value="Submit" disabled>
@@ -77,9 +82,10 @@
 
 </div>
 
-<!-- Scripts -->
+
 
 <script>
+	<!-- Animate the loading of the page -->
     if ('addEventListener' in window) {
         window.addEventListener('load', function () {
             document.body.className = document.body.className.replace(/\bis-loading\b/, '');
@@ -87,14 +93,14 @@
         document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
     }
 
-
+	<!-- Validate that all the inputs are filled -->
     $(function () {
         //Set button disabled
         $("input[type=submit]").attr("disabled", "disabled");
 
-        //Append a change event listener to you inputs
+        //Whenever a select is changed, execute
         $("select").change(function () {
-            //Validate your form here, example:
+		
             var valid = false;
 
             if (
